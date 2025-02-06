@@ -50,12 +50,12 @@ print("Best CV MSE:", -gs.best_score_) #best degree=5 and poly
 
 #best parameters from GridSearchCV
 svm_model = SVR(kernel='poly', degree=5) 
-# Train the model
+# Training the model
 svm_model.fit(X_train, y_train)
 # predictions
 y_pred = svm_model.predict(X_test)
 
-#checking shape of testdata
+#checking shape of testdata before evaluation
 print("Shape of y_test:", y_test.shape)
 print("Shape of y_pred:", y_pred.shape)
 
